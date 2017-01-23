@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../fonts/open-sans-light.ttf');
+}
+
+html {
+	height: 100%;
+	min-height: 100%;
+}
+
+body{
+	height: 100%;
+	min-height: 100%;
+	font-family: 'Open Sans Light', sans-serif;
+}
+
+h1, h2, h3 {
+	font-family: 'Raleway', serif;
+}
+
+p {
+	font-family: 'Open Sans Light', sans-serif;
+}
+
+@media (min-width: 979px) {
+  	ul.nav li.dropdown:hover > ul.dropdown-menu {
+    	display: block;
+  	}
+
+  	#mobile-toggle {
+  		display:none;
+  	}
+}
+
+@media(max-width: 978px) {
+  	.navbar-nav > li > a {
+  		display:inline-block;
+  		width: ;
+  	}
+
+  	#mobile-toggle {
+  		float:right;
+  	}
+
+  	.navbar-default .navbar-nav .open > a, .navbar-default .navbar-nav .open > a:hover, .navbar-default .navbar-nav .open > a:focus {
+  		background-color: transparent;
+  	}
+}
+
+.navbar {
+	margin: 0px;
+	border: 0;
+	z-index: 4;
+  	background-color: rgba(256, 256, 256, 0.94);
+}
+
+.navbar-toggle {
+	border:0;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: inherit;
+}
+
+.navbar .navbar-nav > li > a, .navbar .navbar-nav > li > a:visited{
+	color:#007E57;
+	font-weight: 600;
+	font-family: 'Open Sans Light', sans-serif;
+	letter-spacing: 0.06em;
+	outline: none;
+}
+
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav> li.active> a  {
+	color:#78AC00;
+}
+
+.navbar .navbar-brand, .navbar .navbar-brand:visited {
+	font-weight: 600;
+	font-family: 'Open Sans Light', sans-serif;
+	color:white;
+	font-size: 25px;
+	letter-spacing: 0.03em;
+	outline: none;	
+}
+
+.navbar .navbar-brand:hover {
+	color: #333;
+}
+
+.learn-more {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+	border-radius: 0;
+	outline: none;
+	margin: 10px;
+}
+
+#nextsteps {
+	padding:70px 0;
+}
+
+#nextsteps p {
+	font-family: 'Open Sans Light', sans-serif;
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.medium {
+	width: 80%;
+}
+
+.style-hr { 
+	border: 0; 
+	height: 0.5px; 
+	background-image: linear-gradient(to right, #ccc, #999999, #ccc);
+}
+
+.copyright{
+	font-family: "Open Sans Light", sans-serif;
+	color:white;
+	padding:20px;
+	background-color:#78AC00;
+}
+.navbar-brand{
+	margin:0;
+	padding: 0px;
+}

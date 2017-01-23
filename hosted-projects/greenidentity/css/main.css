@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../fonts/open-sans-light.ttf');
+}
+
+html {
+	height: 100%;
+	min-height: 100%;
+}
+
+body{
+	height: 100%;
+	min-height: 100%;
+	font-family: 'Open Sans Light', sans-serif;
+}
+
+body:after{
+    display:none;
+    content: url(../img/jumbotron1.jpg) url(../img/jumbotron2.jpg);
+}
+
+h1, h2 {
+	font-family: 'Raleway', serif;
+}
+
+p {
+	font-family: 'Open Sans Light', sans-serif;
+}
+
+@media (min-width: 979px) {
+  	ul.nav li.dropdown:hover > ul.dropdown-menu {
+    	display: block;
+  	}
+
+  	#mobile-toggle {
+  		display:none;
+  	}
+
+  	.navbar {
+  		background-color: transparent;
+  	}
+
+	.navbar-default .navbar-nav > li > a, .navbar .navbar-brand, .navbar .navbar-brand:visited {
+		color:white;
+	}
+}
+
+@media(max-width: 978px) {
+	.navbar {
+  		background-color: rgba(256, 256, 256, 0.9);
+  	}
+
+  	.navbar-nav > li > a {
+  		display:inline-block;
+  	}
+
+  	#mobile-toggle {
+  		float:right;
+  	}
+
+  	.navbar-default .navbar-nav .open > a, .navbar-default .navbar-nav .open > a:hover, .navbar-default .navbar-nav .open > a:focus {
+  		background-color: transparent;
+  	}
+}
+
+.navbar {
+	margin: 0px;
+	border: 0;
+	z-index: 4;
+}
+
+.navbar-toggle {
+	border:0;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: inherit;
+}
+
+.navbar-default .navbar-nav > li > a{
+	font-weight: 600;
+	font-family: 'Open Sans Light', sans-serif;
+	letter-spacing: 0.06em;
+	outline: none;
+}
+
+.navbar .navbar-brand, .navbar .navbar-brand:visited {
+	font-weight: 600;
+	font-family: 'Open Sans Light', sans-serif;
+	font-size: 25px;
+	letter-spacing: 0.03em;
+	outline: none;	
+}
+
+.navbar .navbar-brand:hover {
+	color: #333;
+}
+
+
+.jumbotron {
+	position:relative;
+	background: #000 url(../img/jumbotron1.jpg) no-repeat center center fixed;
+	background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    z-index:1;
+    margin:0;
+  	display: table;
+}
+
+.jumbotron .container {
+	width: 100%;
+	text-align: center;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Raleway', serif;
+}
+
+#caption {
+	margin-bottom: 60px;
+	font-family: 'Open Sans Light', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 1.5;
+	padding: 0 0 20px;
+}
+
+.learn-more {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+	border-radius: 0;
+	margin: 10px;
+	outline: none;
+}
+
+#about {
+	text-align: center;
+	padding:30px 0 10px 0;
+}
+
+#about p {
+	font-family: 'Open Sans Light', sans-serif;
+	margin-top: 8px;
+	font-size: 18px;
+}
+
+.style-hr { 
+	border: 0; 
+	height: 0.5px; 
+	background-image: linear-gradient(to right, #ccc, #999999, #ccc);
+}
+
+#features {
+	padding:0;
+}
+
+.copyright{
+	font-family: "Open Sans Light", sans-serif;
+	color:white;
+	padding:20px;
+	background-color:#78AC00;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.medium-width {
+	width:75%;
+}
+
+#switcher {
+    position: absolute;
+	left: 0;
+	right: 0;
+    bottom: 5px;
+	margin:0 auto;
+	padding:0;
+}
+
+#switcher1{
+	background-color: white;
+}
+
+.selector {
+	display: inline-block;
+	cursor: pointer;
+	cursor: hand; 
+	margin:0 5px;
+	width: 10px;
+	height: 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+.navbar-brand{
+	margin:0;
+	padding: 0px;
+}
+
+.service-header{
+	background-color:#78AC00;
+	display: inline-block; 
+	color:white;
+	padding: 10px;
+	font-size: 30px;
+	font-family: 'Raleway', serif;
+	margin-top: 230px;
+	margin-bottom: 30px;
+}
+
+.service-p {
+	background-color: white;
+	color:#007E57;
+	font-size: 18px;
+	padding: 10px 0;
+	margin: 0 10px;
+
+}
+
+#about-descrip {
+	text-align: center;
+	background-color: #007E57;
+	color:white;
+}
+
+#about-descrip h2 {
+	margin: 30px 25px 25px 25px;
+}
+#about-descrip p {
+	margin: 20px 0;
+	font-size: 18px;
+}
+
+#about-pic{
+	margin:0;
+	background:url('../img/home-about.jpg') no-repeat center;
+	background-size:cover;
+}
+
+#people-row {
+	text-align: center;
+	height: 25px;
+	width: 100%;
+	font-size: 20px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.people-icon {
+	display: inline-block;
+	white-space: nowrap;
+}

@@ -1,0 +1,103 @@
+<script>
+	var canvas = document.getElementById("home-canvas");
+	canvas.width = $(window).width();
+	canvas.height = $(window).height();
+	var context = canvas.getContext("2d");
+	context.lineWidth = 0.3;
+
+	var particles = [];
+	var maxParticles = canvas.width*canvas.height/9520;
+
+	function particle(x, y, dx, dy){
+		this.x = x;
+		this.y = y;
+		this.dx = dx;
+		this.dy = dy;
+		this.r = Math.random() * 1.5 + 1.75;
+		this.a = 0.01;
+		this.draw = function(){
+			context.beginPath();
+			context.arc(this.x, this.y, this.r, 0, 2*Math.PI);
+			context.closePath();
+			context.fill();
+		};
+	}
+
+	function getSpeed() //return speed
+	{
+		var speed = Math.random()*1.5 - 0.75;
+		while(speed < 0.2 && speed > -0.2) speed = Math.random()*1.5 - 0.75;
+		return speed;
+	}
+
+	//clear past interval
+	clearInterval(intervalID);
+
+	var intervalID = setInterval(
+		function()
+		{
+			//screen resizing
+			if(canvas.width != $(window).width() || canvas.height != $(window).height())
+			{
+				canvas.width = $(window).width();
+				canvas.height = $(window).height();
+				context = canvas.getContext("2d");
+				maxParticles = canvas.width*canvas.height/9520;
+			}
+
+			context.fillStyle = 'rgba(255, 255, 255, 0.7)';
+			context.strokeStyle = "#FFFFFF";
+
+			//clear screen
+			context.clearRect(0, 0, canvas.width, canvas.height);
+
+			for(var i = 0; i < particles.length; i++)
+			{
+				//delete particles off screen
+				if(particles[i].x < 0 || particles[i].x > canvas.width || particles[i].y < 0 || particles[i].y > canvas.height)
+				{
+					particles.splice(i, 1);
+				}
+
+				//move particles and draw
+				particles[i].x += particles[i].dx;
+				particles[i].y += particles[i].dy;
+				particles[i].draw();
+				
+				//draw lines
+				for(var j = i+1; j < particles.length; j++)
+				{
+					var dist = Math.sqrt((particles[i].x-particles[j].x)*(particles[i].x-particles[j].x) + (particles[i].y-particles[j].y)*(particles[i].y-particles[j].y));
+					if(dist < 150)
+					{
+						context.lineWidth = 0.01 + 14/dist;
+						context.strokeStyle = "rgba(255, 255, 255, " + Math.round(100-2*dist/3)/100 + ")";
+						context.beginPath();
+						context.moveTo(particles[i].x, particles[i].y);
+						context.lineTo(particles[j].x, particles[j].y);
+						context.stroke();
+					}
+				}
+			}
+
+			//add particles if # of particles < max particles
+			if(particles.length < maxParticles)
+			{ 
+				particles.push(new particle(Math.random() * $(window).width(), Math.random() * $(window).height(), getSpeed(), getSpeed()));
+			}
+		}, 50);
+	
+</script>
+<canvas id="home-canvas"></canvas>
+<div class="page-fade vertical-center">
+	<h1>Hi. I'm</h1>
+	<h1 id="name">Charlie Zhang</h1>
+	<div class="home-links">
+		<a href="mailto:luoyang9@gmail.com"><div class="home-link btn-material">EMAIL</div></a>
+		<a href="http://www.linkedin.com/in/luoyang9"><div class="home-link btn-material">LINKEDIN</div></a>
+		<a href="http://www.github.com/luoyang9"><div class="home-link btn-material">GITHUB</div></a>
+		<a href="http://devpost.com/luoyang9"><div class="home-link btn-material">DEVPOST</div></a>
+		<a href="/files/resume.pdf"><div class="home-link btn-material">RESUME</div></a>
+	</div>
+	<div id="credit">Background image provided by <a href="http://www.vladstudio.com">Vladstudio.</a></div>
+</div>

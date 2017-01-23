@@ -1,0 +1,11 @@
+brand | type | cost | popularity | jammieness
+
+smuckers | strawberry | $170000000 ZWL | 0 | jammy
+smuckers | apricot | $99334455.333 CDN with y4000 inflationz | 0 | jamaicic
+smuckers | blackberry | 3 Pounds of salmon liver | 0 | jamilicious
+smuckers | blueberry | the souls of 3 laurier virgins | 0 | jimmy jammy
+smuckers | cherry | 15 cents (+- $100) | 0 | flimflamic jimjamic
+smuckers | pineapple | free (with in jam purchases) | 0 | jammmmmm...punsRhard
+smuckers | raspberry | 16 shekels | 0 | unrusled jammies
+smuckers | wildberry | 18.895 repeated pounds of wildberries | 0 | JAMCENAAA
+

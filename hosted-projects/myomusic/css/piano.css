@@ -1,0 +1,109 @@
+body {
+	width: 100%;
+	height: 100vh;
+	background-image: url('../bg.jpg');
+	border: 2px solid #777;
+}
+
+#wrapper{
+	width: 100%;
+	height: 100%;
+}
+
+.piano-container {
+	position: relative;
+	top: 50px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 700px;
+    box-shadow: 0 0px 5px rgba(5, 5, 5, 0.50);
+    display: flex;
+    z-index: 0;
+}
+
+.pkey {
+	flex: 1;
+	height: 300px;
+	background-color:white;
+	border: 1px solid #000;
+	border-right: 0px;
+	opacity: 0.8;
+	text-align: center;
+	position: relative;
+}
+
+.pkey p {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+
+.blackkeys {
+	position: relative;
+	top: 50px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 700px;
+    display: flex;
+    z-index: 2;
+}
+
+.bkey1{
+	flex: 1;
+	height: 200px;
+	max-width: 50px;
+	margin-left: 35px;
+	background-color: black;
+	border: 1px solid #000;
+	text-align: center;
+	position: relative;
+	bottom: 300px;
+	left: 30px;
+}
+
+.bkey2{
+	flex: 1;
+	height: 200px;
+	max-width: 50px;
+	margin-left: 38px;
+	background-color: black;
+	border: 1px solid #000;
+	text-align: center;
+	position: relative;
+	bottom: 300px;
+	left: 120px;
+}
+
+.sync {
+	position:absolute;
+	font-size: 30px;
+	bottom: 20vh;
+	left: 38vw;
+	margin: 35px;
+	margin-right: 0px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border: 1px solid #fff;
+  	border-radius: 3px;
+  	box-shadow: 0 1px 5px rgba(5, 5, 5, 0.50);
+  	background-color: rgba(0, 0, 0, 0.30);
+	color: #eee;
+}
+
+.instructions {
+	position:absolute;
+	font-size: 30px;
+	bottom: 1vh;
+	left: 4vw;
+	margin: 35px;
+	margin-right: 0px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border: 1px solid #fff;
+  	border-radius: 3px;
+  	box-shadow: 0 1px 5px rgba(5, 5, 5, 0.50);
+  	background-color: rgba(0, 0, 0, 0.30);
+	color: #eee;
+}

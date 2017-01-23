@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+	
+	<title>Myo Piano</title>
+	<link rel="shortcut icon" href="icon.png">
+
+    <!--open graph-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Charlie Zhang" />
+    <meta property="og:site_name" content="Charlie Zhang" />
+    <meta property="og:url" content="http://www.charliezhang.xyz/" />
+    <meta property="og:description" content="Hello!" />
+<!--     <meta property="og:image" content="http://www.prilik.ca/1212/meta/og_image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" /> -->
+    
+    <!--apple-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!--icons-->
+<!--     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+ -->    
+
+	<!-- jquery -->
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+	<!--TweenMax-->
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+	<!--Angular-->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+
+	<!--Myo-->
+	<script type="text/javascript" src="js/myo.js"></script>
+
+	<!-- bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<!-- main -->
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/piano.js"></script>
+	<link href="css/piano.css" rel="stylesheet">					
+</head>
+<body>
+
+<div id="wrapper">
+	<div class="piano-container">
+		<div class="pkey" id="C" onclick="play('C')"><p>C</p></div>
+		<div class="pkey" id="D" onclick="play('D')"><p>D</p></div>
+		<div class="pkey" id="E" onclick="play('E')"><p>E</p></div>
+		<div class="pkey" id="F" onclick="play('F')"><p>F</p></div>
+		<div class="pkey" id="G" onclick="play('G')"><p>G</p></div>
+		<div class="pkey" id="A" onclick="play('A')"><p>A</p></div>
+		<div class="pkey" id="B" onclick="play('B')"><p>B</p></div>
+		<div class="pkey" id="HC" onclick="play('HC')"><p>C</p></div>
+	</div>
+
+	<div class='blackkeys'>
+		<div class="bkey1"></div>
+		<div class="bkey1"></div>
+		<div class="bkey2"></div>
+		<div class="bkey2"></div>
+		<div class="bkey2"></div>
+	</div>
+
+	<div class='sync' onclick="yawSync()">Sync Myo</div>
+	<div class="instructions">Left Myo: Up-C  Down-D  Left-E  Right-F  Right Myo: Up-G  Down-A  Left-B  Right-C</div>
+
+	<audio style="display:hidden" id="ASound">
+  		<source src="music/note6.mp3" type="audio/mpeg">
+	</audio>
+	<audio style="display:hidden" id="BSound">
+  		<source src="music/note7.mp3" type="audio/mpeg">
+	</audio>
+	<audio style="display:hidden" id="CSound">
+  		<source src="music/note1.mp3" type="audio/mpeg">
+	</audio>
+	<audio style="display:hidden" id="DSound">
+  		<source src="music/note2.mp3" type="audio/mpeg">
+	</audio>
+	<audio style="display:hidden" id="ESound">
+  		<source src="music/note3.mp3" type="audio/mpeg">
+	</audio>
+	<audio style="display:hidden" id="FSound">
+  		<source src="music/note4.mp3" type="audio/mpeg">
+	</audio>
+	<audio style="display:hidden" id="GSound">
+  		<source src="music/note5.mp3" type="audio/mpeg">
+	</audio>
+	<audio style="display:hidden" id="HCSound">
+  		<source src="music/note8.mp3" type="audio/mpeg">
+	</audio>
+</div>
+</body>
+</html>

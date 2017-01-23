@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="personal">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+	
+	<title>Myo Music</title>
+	<link rel="shortcut icon" href="icon.png">
+
+    <!--open graph-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Charlie Zhang" />
+    <meta property="og:site_name" content="Charlie Zhang" />
+    <meta property="og:url" content="http://www.charliezhang.xyz/" />
+    <meta property="og:description" content="Hello!" />
+<!--     <meta property="og:image" content="http://www.prilik.ca/1212/meta/og_image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" /> -->
+    
+    <!--apple-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!--icons-->
+<!--     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+ -->    
+
+	<!-- jquery -->
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+	<!--TweenMax-->
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+	<!--Angular-->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+
+	<!--Myo-->
+	<script type="text/javascript" src="js/myo.js"></script>
+
+	<!-- bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<!-- main -->
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<link href="css/main.css" rel="stylesheet">					
+</head>
+<body>
+
+<div id="wrapper" ng-controller="GameController as game">
+	<div class="note-container">
+		<div class="note-path" id="note-path">
+			<div class='path' id ="note-path-left"></div>
+			<div class='path' id="note-path-right"></div>
+			<div class='path' id="note-path-up"></div>
+			<div class='path' id="note-path-down"></div>
+		</div>
+		<div class="note-bar">
+				<div class="note" id="left" ng-click="noteBarClick(1)"><p style="font-size:40px;"  class="glyphicon glyphicon-arrow-up"></p></div>
+				<div class="note" id="right" ng-click="noteBarClick(2)"><p style="font-size:40px;"  class="glyphicon glyphicon-arrow-down"></p></div>
+				<div class="note" id="up" ng-click="noteBarClick(3)"><p style="font-size:40px;" class="glyphicon glyphicon-arrow-up"></p></div>
+				<div class="note" id="down" ng-click="noteBarClick(4)"><p style="font-size:40px;"  class="glyphicon glyphicon-arrow-down"></p></div>
+		</div>
+	</div>
+
+	<h1 class='score' style="position:absolute; top:0; left:0">Score : {{score}}</h1>
+	<p class='instructions' style="position:absolute; top:100px; left:0">Use a,s,d,f to hit the notes as they come down. Or, connect two Myos and swipe up/down on the left Myo to control the first two and swipe up/down on the right Myo to control the last two. <a href="piano.html">Link to Piano App</a></p>
+	<div class='start'>
+		<div class='start-btn' ng-click="loadSong('fire')">START THROUGH THE FIRE AND FLAMES</div>
+		<div class='start-btn' ng-click="loadSong('roboto')">START MR ROBOTO</div>
+	</div>
+
+	<audio style="width:100%;display:hidden;" id="currentSong">
+  		<source src="music/roboto.mp3" type="audio/mpeg">
+	</audio>
+</div>
+</body>
+</html>

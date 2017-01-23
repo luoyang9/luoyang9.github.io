@@ -1,0 +1,166 @@
+body {
+	width: 100%;
+	height: 100vh;
+	background-image: url('../bg.jpg');
+	border: 2px solid #777;
+}
+
+.score {
+	position:absolute;
+	top:0;
+	left:0;
+	margin: 35px;
+	margin-right: 0px;
+	padding: 10px;
+	border: 1px solid #fff;
+  	border-radius: 3px;
+  	box-shadow: 0 1px 5px rgba(5, 5, 5, 0.50);
+  	background-color: rgba(143, 0, 179, 0.30);
+	color: #eee;
+}
+
+.instructions {
+	margin: 35px;
+	margin-right: 0px;
+	padding: 10px;
+	border: 1px solid #fff;
+  	border-radius: 3px;
+  	box-shadow: 0 1px 5px rgba(5, 5, 5, 0.50);
+  	background-color: rgba(143, 0, 179, 0.30);
+	color: #eee;
+	width:250px;
+}
+
+.start {
+	position:absolute;
+	top: 0;
+	right:0;
+	width: 300px;
+	display: inline;
+	margin: 5px;
+}
+
+.start-btn {
+	text-align:center;
+	font-size: 25px;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid #fff;
+  	border-radius: 3px;
+  	box-shadow: 0 1px 5px rgba(5, 5, 5, 0.50);
+  	background-color: rgba(143, 0, 179, 0.30);
+	color: #eee;
+}
+
+#wrapper {
+	width: 100%;
+}
+
+.note-container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
+  	text-align: center;
+    box-shadow: 0 0px 5px rgba(5, 5, 5, 0.50);
+}
+
+.note-path {
+	width: 100%;
+	height: 500px;
+    display: flex;
+}
+
+.path {
+	margin: 2px;
+	flex: 1;
+}
+
+#note-path-left {
+	position: relative;
+	height: 100%;
+	background-color: rgba(144, 238, 144, 1);
+	z-index: -2;
+}
+
+#note-path-right {
+	position: relative;
+	height: 100%;
+	background-color: rgba(255, 192, 203, 1);
+	z-index: -2;
+}
+
+#note-path-up {
+	position: relative;
+	height: 100%;
+	background-color: rgba(173, 216, 230, 1);
+	z-index: -2;
+}
+
+#note-path-down {
+	position: relative;
+	height: 100%;
+	background-color: rgba(255, 255, 224, 1);
+	z-index: -2;
+}
+
+#note-path-left > div{
+	background-color: #18BA1B;
+}
+
+
+#note-path-right > div{
+	background-color: #B82E2E;
+}
+
+
+#note-path-up > div{
+	background-color: #3444BF;
+}
+
+
+#note-path-down > div{
+	background-color: #B3BA2F;
+}
+
+
+.note-bar {
+	display: inline-block;	
+	width: 100%;
+    display: flex;
+}
+
+.note {
+	color: black;
+	height: 50px;
+	margin: 2px;
+	flex: 1;
+}
+
+.activeNote {
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	top: 0;
+	background-color: black;
+	z-index: -1;
+}
+
+#left {
+	background-color: green;
+	opacity: 0.7;
+}
+
+#right {
+	background-color: red;
+	opacity: 0.7;
+}
+
+#up {
+	background-color: blue;
+	opacity: 0.7;
+}
+
+#down {
+	background-color: yellow;
+	opacity: 0.7;
+}

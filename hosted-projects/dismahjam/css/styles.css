@@ -1,0 +1,482 @@
+@font-face {
+  font-family: 'bebas';
+  src: url("/fonts/BebasNeue-webfont.eot");
+  src: url("/fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#BebasNeueRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "bebas", "Helvetica Neue", Arial, sans-serif;
+    color: #FFCCFF;
+    margin: auto;
+    background-image: url("../img/strawberry.jpg");
+    background-size: 600px 300px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    width:100%;
+    height:100%;
+}
+
+a {
+    text-decoration: none;
+    color: 0;
+    cursor: pointer;
+
+}
+
+/*Big Screens Vertical*/
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.jam-main {
+     background-color: #FF3399;
+     border-radius: 40px;
+     padding:10px;
+}
+
+.jam-main h1 {
+    font-size: 72px;
+    margin: 0 0 0 0;
+}
+
+.jam-container {
+    width: 460;
+    height: 460;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.jam-stats-button {
+    border-radius: 10px;
+    font-size: 30px;
+    margin: auto;
+    margin-top: 0px;
+    background-color: white;
+    width: 460px;
+    height: 40px;
+    padding-top: 10px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+
+    transition: all .2s ease-in-out;
+}
+.jam-stats-button:hover {
+    background-color: beige;
+}
+
+
+
+.jam-stats {
+    color: black;
+
+    margin: auto;
+    margin-top: -20px;
+    
+    width: 460px;
+    background-color: white; 
+    border-radius: 10px;
+
+    height: 0;
+    overflow: hidden;
+
+    transition: height 1s;
+    -webkit-transition: height 1s;
+}
+.jam-stats h3 {
+    font-size: 32px;
+    margin: 0 0 0 0;
+}
+.jam-stats p {
+    font-size: 26px;
+    margin: 0 0 0 0;
+}
+
+.img-container {
+    width: 460;
+    height: 460;
+    margin: auto;
+}
+.img-container img {
+    width: 100%;
+    /*top:-50%;*/
+    position: relative;
+    height: 100%;
+}
+
+.yee {
+    font-size: 60px;
+    width: 460;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+.yee:hover {
+    transform: scale(1.5);
+    background-color: beige;
+}
+
+.jam-found {
+    margin: auto;
+    
+    width: 460px;
+    border-radius: 10px;
+
+    height: 0;
+    overflow: hidden;
+
+    transition: height 1s;
+    -webkit-transition: height 1s;
+}
+
+.nah {
+    font-size: 32px;
+    width: 460;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+.nah:hover {
+    transform: scale(1.5);
+    background-color: beige;
+}
+
+.share {
+    margin: auto;
+    width: 600px;
+    text-align: center;
+}
+.tweet-button, .facebook-button {
+    display: inline-block;
+    background: rgb(119, 110, 101);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border: 0;
+    margin-top:5px;
+}
+
+.contact {
+    margin: 2em;
+    background-color: #FF3399;
+    border-radius: 20px;
+    padding:10px;
+}
+.contact h3 {
+    font-size: 32px;
+    margin: 0 0 0 0;
+}
+.contact p {
+    font-size: 38px;
+    margin: 0 0 0 0;
+}
+
+.login{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+    position: fixed;
+    background-color:white;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.signup{
+    display: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+    position: fixed;
+    background-color:white;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.darkBackground {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999;
+    width: 100%;
+    height :100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+.map { 
+    width:400px;
+    height:400px;
+    margin: 10 auto;
+}
+
+
+
+.jam-account {
+    background-color: #FF3399;
+    border-radius: 20px;
+    margin: 2em;
+    padding: 10px;
+}
+#welcome {
+    font-size: 36px;
+}
+
+
+/*Small Screens Vertical*/
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .jam-main {
+         background-color: #FF3399;
+         border-radius: 20px;
+         padding:5px;
+    }
+
+    .jam-main h1 {
+        font-size: 36px;
+        margin: 0 0 0 0;
+    }
+
+    .jam-container {
+        width: 230;
+        height: 230;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 5px;
+
+    }
+    .jam-stats-button {
+        border-radius: 5px;
+        font-size: 15px;
+        margin: auto;
+        margin-top: 0px;
+        background-color: white;
+        width: 230px;
+        height: 20px;
+        padding-top: 5px;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+
+        transition: all .2s ease-in-out;
+    }
+    .jam-stats-button:hover {
+        background-color: beige;
+    }
+
+
+
+    .jam-stats {
+        color: black;
+
+        margin: auto;
+        margin-top: -10px;
+        
+        width: 230px;
+        background-color: white; 
+        border-radius: 5px;
+
+        height: 0;
+        overflow: hidden;
+
+        transition: height 1s;
+        -webkit-transition: height 1s;
+    }
+    .jam-stats h3 {
+        font-size: 16px;
+        margin: 0 0 0 0;
+    }
+    .jam-stats p {
+        font-size: 16px;
+        margin: 0 0 0 0;
+    }
+
+    .img-container {
+        width: 230;
+        height: 230;
+        margin: auto;
+    }
+    .img-container img {
+        width: 100%;
+        /*top:-50%;*/
+        position: relative;
+        height: 100%;
+    }
+
+    .yee {
+        font-size: 30px;
+        width: 230;
+        margin: auto;
+        margin-top: 5px;
+        background-color: white;
+        border-radius: 5px;
+        transition: all .2s ease-in-out;
+    }
+    .yee:hover {
+        transform: scale(1.5);
+        background-color: beige;
+    }
+
+    .jam-found {
+        margin: auto;
+        
+        width: 230px;
+        border-radius: 5px;
+
+        height: 0;
+        overflow: hidden;
+
+        transition: height 1s;
+        -webkit-transition: height 1s;
+    }
+
+    .nah {
+        font-size: 16px;
+        width: 230;
+        margin: auto;
+        background-color: white;
+        border-radius: 5px;
+        transition: all .2s ease-in-out;
+    }
+    .nah:hover {
+        transform: scale(1.5);
+        background-color: beige;
+    }
+
+    .share {
+        margin: auto;
+        width: 300px;
+        text-align: center;
+    }
+    .tweet-button, .facebook-button {
+        display: inline-block;
+        background: rgb(119, 110, 101);
+        font-size: 10px;
+        border-radius: 2.5px;
+        padding: 0 10px;
+        text-decoration: none;
+        color: #f9f6f2;
+        height: 20px;
+        line-height: 20px;
+        cursor: pointer;
+        border: 0;
+        margin-top:2.5px;
+    }
+
+    .contact {
+        margin: 1em;
+        background-color: #FF3399;
+        border-radius: 10px;
+        padding:5px;
+    }
+    .contact h3 {
+        font-size: 16px;
+        margin: 0 0 0 0;
+    }
+    .contact p {
+        font-size: 18px;
+        margin: 0 0 0 0;
+    }
+
+    .login{
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 250px;
+        height: 125px;
+        position: fixed;
+        background-color:white;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 10px 25px;
+        text-align: center;
+    }
+
+    .signup{
+        display: none;
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 250px;
+        height: 125px;
+        position: fixed;
+        background-color:white;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 10px 25px;
+        text-align: center;
+    }
+
+    .darkBackground {
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 999;
+        width: 100%;
+        height :100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+
+    .map { 
+        width:200px;
+        height:200px;
+        margin: 5 auto;
+    }
+
+    .jam-account {
+        background-color: #FF3399;
+        border-radius: 10px;
+        margin: 1em;
+        padding: 5px;
+    }
+    #welcome {
+        font-size: 18px;
+    }
+}
