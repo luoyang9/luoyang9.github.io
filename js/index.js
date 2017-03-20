@@ -1,14 +1,34 @@
+var preload = function(images, callback) {
+	if (!('Promise' in window)) {
+		return;
+	}
+
+	var imagePromises = [];
+
+	images.forEach(function(image) {
+		imagePromises.push(new Promise(function(resolve, reject){
+			var img = new Image();
+			img.onload = resolve;
+			img.onerror = resolve;
+			img.src = image;
+		}));
+	});
+
+	Promise.all(imagePromises)
+		.then(function() { callback(); })
+		.catch(function(err) { console.error(err); });
+};
+
 $( document ).ready( () => {
 
-	var ball_distance = $(window).width() < 900 ? 55 : 80;
+	// initial values
+	var ball_distance = $(window).width() < 780 ? 55 : 80;
 	var desktop = $(window).height() > 400;
 
 	function init() {
 		// remove loading ball and pulse
 		$(".nav-init").remove();
 		$(".nav-pulse").remove();
-
-
 
 		$(".nav-selected").data("index", 0);
 
@@ -32,21 +52,27 @@ $( document ).ready( () => {
 			$(".nav-ball").each(function(i, ball) {
 				TweenLite.to(ball, 0.4, {delay:0.1*i, top: 15, left: 15+i*ball_distance, margin: 0});
 			});
-
 		}
 	}
 
-	init();
+	// preload images
+	preload( 
+		$(".preload").map(function() { 
+			return $(this).data("image"); } 
+		).get()
+	, init);
+
 
 	// resize callback
+
 	$(window).resize(function(evt) {
 		var expand = false;
 
 		// recalculate ball distance
-		if($(window).width() < 900 && ball_distance == 80) {
+		if($(window).width() < 780 && ball_distance == 80) {
 			ball_distance = 55;
 			expand = true;
-		} else if($(window).width() >= 900 && ball_distance == 55){
+		} else if($(window).width() >= 780 && ball_distance == 55){
 			ball_distance = 80;
 			expand = true;
 		}

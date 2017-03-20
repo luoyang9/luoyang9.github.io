@@ -41,7 +41,7 @@ html, body {
 		font-size: 12px;
 	}
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 780px) {
 		width: 50px;
 		height: 50px;
 
@@ -86,7 +86,7 @@ html, body {
  	-moz-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 780px) {
 		width: 50px;
 		height: 50px;
 	}
@@ -107,43 +107,22 @@ html, body {
 		flex: 3;
 
 		h1 {
-			font-size: 50px;
+			font-size: 90px;
+			font-family: $fancy;
 		}
 
 		p {
 			font-size: 25px;
+			padding-right: 10px;
 		}
 
-		.contact-links {
-			margin-top: 15px;
-			display: inline-block;
-
-			a {
-				color: $primary-accent;
-			}
-
-			span {
-				display: inline-block;
-				margin: 0 7px;
-			}
-		}
-
-		@media screen and (max-width: 900px) {
+		@media screen and (max-width: 780px) {
 			h1 {
-				font-size: 30px;
+				font-size: 32px;
 			}
 
 			p {
-				font-size: 15px;
-			}
-
-			.contact-links {
-				margin-top: 8px;
-				font-size: 12px;
-
-				 span {
-				 	margin: 0 4px;
-				 }
+				font-size: 20px;
 			}
 
 			padding-right: 15px;
@@ -156,6 +135,24 @@ html, body {
 		width: 100%;
 		text-align: center;
 
+		.contact-links {
+			margin: 20px 0;
+			font-size: 20px;
+
+			a {
+				color: $primary-color;
+
+				&:hover {
+					color: $primary-accent;
+				}
+			}
+
+			span {
+				display: inline-block;
+				margin: 0 7px;
+			}
+		}
+
 		.profile-pic {
 			display: inline-block;
 			width: 300px;
@@ -166,11 +163,16 @@ html, body {
 			background-size: cover;
 		}
 
-		@media screen and (max-width: 900px) {
+		@media screen and (max-width: 780px) {
 			.profile-pic {
 				width: 150px;
 				height: 150px;
 				border-radius: 75px;
+			}
+
+			.contact-links {
+				margin: 10px 0;
+				font-size: 14px;
 			}
 		}
 	}
@@ -186,6 +188,11 @@ html, body {
 			color: white;
 			padding: 10px 20px;
 			border-radius: 3px;
+
+			@media screen and (max-width: 780px) {
+				font-size: 12px;
+				padding: 8px 13px;
+			}
 		}
 
 		.cta-about {
