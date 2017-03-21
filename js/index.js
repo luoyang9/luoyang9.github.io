@@ -91,14 +91,26 @@ $( document ).ready( () => {
 	// onclicks for navigation
 
 	$(".nav-home").off().click(function() {
+		$(window).scrollTo($(".intro")[0], 400);
 	});
 
 	$(".nav-about").off().click(function() {
+		$(window).scrollTo($(".about")[0], 400);
 	});
 
 	$(".nav-projects").off().click(function() {
+		$(window).scrollTo($(".projects")[0], 400);
 	});
 
-	$(".nav-resume").off().click(function() {
+	$(".nav-contact").off().click(function() {
+		$(window).scrollTo($(".contact")[0], 400);
+	});
+
+	$(".cta-about").click(function() {
+		$(window).scrollTo($(".about")[0], 400);
+	});
+
+	$(".cta-projects").click(function() {
+		$(window).scrollTo($(".projects")[0], 400);
 	});
 });
