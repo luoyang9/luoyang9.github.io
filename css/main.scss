@@ -90,6 +90,10 @@ html, body {
 	opacity: 0;
 }
 
+.container {
+	padding: 50px 20px;
+}
+
 .intro {
 	height: 100vh;
 	display: flex;
@@ -227,7 +231,6 @@ html, body {
 }
 
 .about {
-	padding: 50px 20px;
 	width: 60%;
 	margin: 0 auto;
 
@@ -260,7 +263,6 @@ html, body {
 }
 
 .projects {
-	padding: 50px 20px;
 	width: 60%;
 	margin: 0 auto;
 
@@ -275,13 +277,23 @@ html, body {
 		height: 300px;
 		margin: 10px 0;
 
+		@media screen and (max-width: 780px) {
+			height: auto;
+		}
+
 		.project-image {
 			display: inline-block;
 			width: 50%;
 			height: 100%;
+
+			@media screen and (max-width: 780px) {
+				width: 100%;
+				height: 300px;
+			}
 		}
 
 		.project-description {
+			margin-top: 5px;
 			vertical-align: top;
 			display: inline-block;
 			width: 50%;
@@ -296,11 +308,75 @@ html, body {
 			p {
 				padding: 20px;
 			}
+
+			@media screen and (max-width: 780px) {
+				width: 100%;
+
+				h3 {
+					padding: 5px 0;
+				}
+				p {
+					padding: 0;
+				}
+			}
+
+		}
+
+		.project-tags {
+			padding: 0 20px;
+			margin-bottom: 20px;
+
+			.project-tag {
+				display: inline-block;
+				padding: 3px 12px;
+				border: 1px solid $primary-accent;
+				border-radius: 4px;
+				background-color: $primary-accent;
+				font-size: 0.7em;
+				color: white;
+				margin: 2px 0;
+			}
+
+			@media screen and (max-width: 780px) {
+					padding: 10px 0;
+			}
 		}
 	}
 
 	@media screen and (max-width: 780px) {
 		width: 100%;
+	}
+}
+
+
+footer {
+	background-color: $primary-color;
+	color: #a1a1a1;
+
+	.footer-links {
+		text-align: center;
+		padding: 80px 0;
+		font-weight: 600;
+		font-size: 16px;
+
+		span {
+			margin: 0 30px;
+			cursor: pointer;
+		}
+
+		@media screen and (max-width: 780px) {
+			font-size: 14px;
+
+			span {
+				margin: 0 5px;
+			}
+		}
+	}
+
+	.footer-note {
+		font-size: 0.7em;
+		text-align: center;
+		padding-bottom: 50px;
 	}
 }
 

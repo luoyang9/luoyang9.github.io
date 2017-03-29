@@ -113,4 +113,21 @@ $( document ).ready( () => {
 	$(".cta-projects").click(function() {
 		$(window).scrollTo($(".projects")[0], 400);
 	});
+
+	$(".footer-home").off().click(function() {
+		$(window).scrollTo($(".intro")[0], 400);
+	});
+
+	$(".footer-about").off().click(function() {
+		$(window).scrollTo($(".about")[0], 400);
+	});
+
+	$(".footer-projects").off().click(function() {
+		$(window).scrollTo($(".projects")[0], 400);
+	});
+
+	$(".footer-contact").off().click(function() {
+		$(window).scrollTo($(".contact")[0], 400);
+	});
+
 });
