@@ -24,6 +24,7 @@ $( document ).ready( () => {
 	// initial values
 	var ball_distance = $(window).width() < 780 ? 55 : 80;
 	var desktop = $(window).height() > 400;
+	var nav_hidden = false;
 
 	function init() {
 		// remove loading ball and pulse
@@ -46,6 +47,10 @@ $( document ).ready( () => {
 			$(".nav-ball").each(function(i, ball) {
 				TweenLite.to(ball, 0.4, {delay:0.1*i, top: 15, left: 15+i*ball_distance, margin: 0});
 			});
+		}
+
+		if( $(window).width() < 780) {
+			$(".nav-ball").css("position", "absolute");
 		}
 	}
 
