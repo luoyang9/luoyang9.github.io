@@ -248,6 +248,13 @@ a {
         padding: 20px;
         position: relative;
         box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+        .about .about-timeline .about-timeline-item .about-timeline-panel .about-timeline-date {
+          float: right; }
+        @media (max-width: 780px) {
+          .about .about-timeline .about-timeline-item .about-timeline-panel .about-timeline-date {
+            float: none; }
+          .about .about-timeline .about-timeline-item .about-timeline-panel span {
+            display: block; } }
         .about .about-timeline .about-timeline-item .about-timeline-panel:before {
           position: absolute;
           top: 26px;
