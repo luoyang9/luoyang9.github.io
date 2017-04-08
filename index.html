@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="personal">
+<html lang="en">
 <head>    
 	<meta charset="utf-8">
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -7,99 +7,295 @@
 	
 	<title>Charlie Zhang</title>
 
-	<meta name="description" content="Hi, I'm a software engineering student at the University of Waterloo. I like to code things.">
+	<meta name="description" content="Charlie Zhang | A software engineering student at the University of Waterloo.">
 
     <!--open graph-->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Charlie Zhang" />
-    <meta property="og:site_name" content="Charlie Zhang - A Software Engineering Student at the University of Waterloo" />
+    <meta property="og:site_name" content="Charlie Zhang | A Software Engineering Student at the University of Waterloo" />
     <meta property="og:url" content="http://www.charliezhang.xyz/" />
     <meta property="og:description" content="A software engineering student at the University of Waterloo" />
 	
     <!--favicon-->
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png?v=oLLE3ga53O">
-	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png?v=oLLE3ga53O">
-	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png?v=oLLE3ga53O">
-	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png?v=oLLE3ga53O">
-	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png?v=oLLE3ga53O">
-	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png?v=oLLE3ga53O">
-	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png?v=oLLE3ga53O">
-	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png?v=oLLE3ga53O">
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon-180x180.png?v=oLLE3ga53O">
-	<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png?v=oLLE3ga53O" sizes="32x32">
-	<link rel="icon" type="image/png" href="/favicon/favicon-194x194.png?v=oLLE3ga53O" sizes="194x194">
-	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png?v=oLLE3ga53O" sizes="96x96">
-	<link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png?v=oLLE3ga53O" sizes="192x192">
-	<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png?v=oLLE3ga53O" sizes="16x16">
-	<link rel="manifest" href="/favicon/manifest.json?v=oLLE3ga53O">
-	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=oLLE3ga53O" color="#5bbad5">
-	<link rel="shortcut icon" href="/favicon/favicon.ico?v=oLLE3ga53O">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png?v=oLLE3ga53O">
-	<meta name="msapplication-config" content="/favicon/browserconfig.xml?v=oLLE3ga53O">
-	<meta name="theme-color" content="#38afff">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="favicon/manifest.json">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 	
-	<!-- jquery -->
+	<!-- jQuery -->
 	<script
-	  src="https://code.jquery.com/jquery-1.12.4.min.js"
-	  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous"></script>
 
+	<!-- scrollTo -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+
 	<!--TweenMax-->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
-
-	<!--Angular-->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
-
-	<!--PreloadJS-->
-	<script type="text/javascript" src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 
 	<!--Fonts-->
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<link href="octicons/octicons.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link href="css/elusive-icons.min.css" rel="stylesheet">
 
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-	<!-- main -->
-	<script type="text/javascript" src="js/app.js?v=3.0"></script>
-	<link href="css/main.css?v=3.0" rel="stylesheet">																					
+	<link href="css/main.css" rel="stylesheet">																					
 </head>
 <body>
-<div id="bg">
+<!--↑↑↓↓←→←→BA-->
+<a><div class="nav-ball nav-home">
+	<div class="nav-label">Home</div>
+</div></a>
+<a><div class="nav-ball nav-about">
+	<span class="nav-label">About</span>
+</div></a>
+<a><div class="nav-ball nav-projects">
+	<span class="nav-label">Projects</span>
+</div></a>
+<a><div class="nav-ball nav-contact">
+	<span class="nav-label">Contact</span>
+</div></a>
+
+<div class="nav-pulse"></div>
+<div class="nav-ball nav-init">
+	<span class="nav-label">Welcome</span>
 </div>
 <div class="wrapper">
-	<div class="page container-fluid" ui-view></div>
-
-	<div ng-controller="NavController as nav">
-
-		<div class="nav-pulse" ng-show="nav.unclicked"></div>
-
-		<div class="nav-start nav-ball" ng-hide="nav.unclicked" ng-click="nav.change()" ng-mouseover="nav.desktopActivate()">
-			<span display="block" class="mega-octicon octicon-three-bars"></span>
+	<div class="intro">
+		<div class="intro-header right">
+			<h1>Charlie Zhang</h1>
+			<p>Student. Developer.</p>
 		</div>
-		<a ui-sref="home" id="trigger-home"><div class="nav-ball nav-home" ng-hide="nav.unclicked" ng-click="nav.mobileShrink()">
-			<div class="octicon octicon-home"></div> 
-			<div class="nav-label">Home</div>
-		</div></a>
-		<a ui-sref="about"><div class="nav-ball nav-about" ng-hide="nav.unclicked" ng-click="nav.mobileShrink()">
-			<span class="octicon octicon-person"></span> 
-			<span class="nav-label">About</span>
-		</div></a>
-		<a ui-sref="projects"><div class="nav-ball nav-projects" ng-hide="nav.unclicked" ng-click="nav.mobileShrink()">
-			<span class="octicon octicon-gist"></span> 
-			<span class="nav-label">Projects</span>
-		</div></a>
-		<a href="files/resume.pdf"><div class="nav-ball nav-resume" ng-hide="nav.unclicked" ng-click="nav.mobileShrink()">
-			<span class="octicon octicon-file-text"></span> 
-			<span class="nav-label">Resume</span>
-		</div></a>
-
-		<div class="nav-ball nav-init" ng-show="nav.unclicked" ng-click="nav.trigger()"></div>
+		<div class="profile-pic-container">
+			<div data-image="img/profile.jpg" class="profile-pic preload"></div>
+			<div class="contact-links">
+				<a target="_blank" href="mailto:luoyang9@gmail.com">
+					<span class="contact-container">
+						<i class="el el-envelope"></i>
+						<p class="contact-name">Email</p>
+					</span>
+				</a>
+				<a target="_blank" href="https://www.github.com/luoyang9">
+					<span class="contact-container">
+						<i class="el el-github"></i>
+						<p class="contact-name">GitHub</p>
+					</span>
+				</a>
+				<a target="_blank" href="https:ca.linkedin.com/in/luoyang9">
+					<span class="contact-container">
+						<i class="el el-linkedin"></i>
+						<p class="contact-name">LinkedIn</p>
+					</span>
+				</a>
+				<a target="_blank" href="/files/resume.pdf">
+					<span class="contact-container">
+						<i class="el el-file"></i>
+						<p class="contact-name">Resume</p>
+					</span>
+				</a>
+			</div>
+		</div>
+		<div class="cta">
+			<div class="cta-btn cta-about">More About Me</div>
+			<div class="cta-btn cta-projects">View My Works</div>
+		</div>
 	</div>
+	<div class="container">
+		<div class="about">
+			<h1>About Me</h1>
+			<div class="description">
+				<p>Hi, my name is Charlie Zhang. I'm a second year student at the University of Waterloo studying Software Engineering.</p>
+				<p>In my spare time I like to play video games, cook delicious food, and watch cool shows and cartoons.</p>
+				<p>I'm always looking for interesting opportunities. You can check out my <a href="files/resume.pdf">resume here</a> or reach me by <a href="mailto:charlie@charliezhang.xyz">email here</a>.</p>
+				<p>Here's a short timeline of some of the interesting bits of my life:</p>
+			</div>
+			 <ul class="about-timeline">
+		        <li class="about-timeline-item">
+		          <div class="about-timeline-badge" style="background-color: #18cfaa"><i class="el el-briefcase"></i></div>
+		          <div class="about-timeline-panel">
+		              <a href="http://www.tealsoftware.io" target="_blank"><img data-image="img/teal.png" class="preload" src="img/teal.png" height="25px" /></a>
+		              <h4>Full-Stack Software Developer</h4>
+		              <span>Kitchener, ON</span><span style="float: right">Jan - Apr, 2017</span>
+		              <ul class="about-timeline-content-list">
+		              	<li>Built my first gaming PC (<a target="_blank" href="http://www.reddit.com/r/Ayymd">r/Ayymd</a>)</li>
+		              	<li>Experienced the fast-paced life of an incubator start-up</li>
+		              	<li>Discovered <a href="https://www.firehousesubs.com/" target="_blank">Firehouse Subs</a> and graph databases</li>
+		              </ul>
+		          </div>
+		        </li>
+		        <li class="about-timeline-item about-timeline-inverted">
+		          <div class="about-timeline-badge" style="background-color: #1CA352"><i class="el el-briefcase"></i></div>
+		          <div class="about-timeline-panel">
+		              <a href="http://www.venasolutions.com" target="_blank"><img data-image="img/vena.svg" class="preload" src="img/vena.svg" height="30px" /></a>
+		              <h4>Full-Stack Software Developer</h4>
+		              <span>Toronto, ON</span><span style="float: right">May - August, 2016</span>
+		              <ul class="about-timeline-content-list">
+		              	<li>Explored downtown Toronto for the first time</li>
+		              	<li>Played ultimate frisbee every Frisbee Friday (and Tuesday) with co-workers</li>
+		              	<li>Achieved the fastest time at an escape room in downtown Toronto with a team of co-ops</li>
+		              </ul>
+		          </div>
+		        </li>
+		        <li class="about-timeline-item">
+		          <div class="about-timeline-badge" style="background-color: #FFD54F"><i class="el el-book"></i></div>
+		          <div class="about-timeline-panel">
+		             <a href="https://www.uwaterloo.ca" target="_blank"><img data-image="img/uwaterloo.jpg" class="preload" src="img/uwaterloo.jpg" height="35px" /></a>
+		              <h4>Software Engineering</h4>
+		              <span>Waterloo, ON</span><span style="float: right">2015 - 2020</span>
+		              <ul class="about-timeline-content-list">
+		              	<li>Learned how to cook tasty meals</li>
+		              	<li>Started doing my own laundry, cleaning my room, doing taxes, etc.</li>
+		              	<li>Reminisced about the care-free high school days</li>
+		              </ul>
+		              <p></p>
+		          </div>
+		        </li>
+		        <li class="about-timeline-item about-timeline-inverted">
+		          <div class="about-timeline-badge" style="background-color: #202B67"><i class="el el-briefcase"></i></div>
+		          <div class="about-timeline-panel">
+		              <a href="http://www.mikutech.com" target="_blank"><img data-image="img/mikutech.png" class="preload" src="img/mikutech.png" height="35px" /></a>
+		              <h4>Programmer</h4>
+		              <span>London, ON</span><span style="float: right">Oct 2013 - August, 2014</span>
+		              <ul class="about-timeline-content-list">
+		              	<li>Got my first taste of software development in the real world</li>
+		              	<li>Tested a mini-game ad for the Ender's Game movie that was shown on the YouTube front page</li>
+		              	<li>Stressed out about getting into University of Waterloo</li>
+		              </ul>
+		          </div>
+		        </li>
+		    </ul>
+		</div>
+		<div class="projects">
+			<h1>Featured Projects</h1>
+			<div class="project">
+				<div data-image="img/shooter.png" class="project-image preload" style="background: url('img/shooter.png') no-repeat center center;background-size: cover;">
+				</div><div class="project-description">
+					<div class="padding">
+						<h3>Space Shooter Game</h3>
+						<p>A vertical shooter game made in libGDX. Currently in development. Features different powerups, enemies, and levels.</p>
+						<div class="project-tags">
+							<span class="project-tag">Java</span>
+							<span class="project-tag">libGDX</span>
+							<span class="project-tag">Game</span>
+						</div>
+						<div class="project-links">
+							<a href="https://github.com/luoyang9/shooter" target="_blank"><i class="el el-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div data-image="img/airband.png" class="project-image preload" style="background: url('img/airband.png') no-repeat center center;background-size: cover;">
+				</div><div class="project-description">
+					<div class="padding">
+						<h3>Airband</h3>
+						<p>A Unity game where you can play virtual instruments like the piano, bongos, and drum set using a Leap Motion and your hands! Winner at WearHacks Waterloo 2017.</p>
+						<div class="project-tags">
+							<span class="project-tag">C#</span>
+							<span class="project-tag">Unity</span>
+							<span class="project-tag">Leap Motion</span>
+						</div>
+						<div class="project-links">
+							<a href="https://github.com/luoyang9/airband-client" target="_blank"><i class="el el-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div data-image="img/voyagr.png" class="project-image preload" style="background: url('img/voyagr.png') no-repeat center center;background-size: cover;">
+				</div><div class="project-description">
+					<div class="padding">
+						<h3>Voyagr</h3>
+						<p>An online travel blog featuring an interactive map with markers for each blog post. Made at Hack the North 2015.</p>
+						<div class="project-tags">
+							<span class="project-tag">JavaScript</span>
+							<span class="project-tag">MapBox</span>
+							<span class="project-tag">Google APIs</span>
+						</div>
+						<div class="project-links">
+							<a href="https://github.com/rickeywang/hack2015" target="_blank"><i class="el el-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div data-image="img/knowyourself.jpg" class="project-image preload" style="background: url('img/knowyourself.jpg') no-repeat center center;background-size: cover;">
+				</div><div class="project-description">
+					<div class="padding">
+						<h3>Know Yourself</h3>
+						<p>Analyzes your Facebook profile and displays interesting facts/statistics. Made at Hack the 6ix 2016.</p>
+						<div class="project-tags">
+							<span class="project-tag">AngularJS</span>
+							<span class="project-tag">Express</span>
+							<span class="project-tag">Facebook SDK</span>
+							<span class="project-tag">Clarifai API</span>
+						</div>
+						<div class="project-links">
+							<a href="https://www.youtube.com/watch?v=l9A_PH_t830" target="_blank"><i class="el el-youtube"></i></a>
+							<a href="https://github.com/luoyang9/6ix" target="_blank"><i class="el el-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div data-image="img/getout.png" class="project-image preload" style="background: url('img/getout.png') no-repeat center center;background-size: cover;">
+				</div><div class="project-description">
+					<div class="padding">
+						<h3>Getout!</h3>
+						<p>A web platform that matches together university students with similar physical interests. Created for the final design project for SHAD 2015.</p>
+						<div class="project-tags">
+							<span class="project-tag">PHP</span>
+							<span class="project-tag">MySQL</span>
+						</div>
+						<div class="project-links">
+							<a href="https://github.com/luoyang9/SHAD-2015-Project" target="_blank"><i class="el el-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="project-more">
+				<a target="_blank" href="https://www.github.com/luoyang9"><i class="el el-github"></i> View more on my GitHub</a>
+			</div>
+		</div>
+		<div class="contact">
+			<h1>Contact</h1>
+			<div class="contact-info">
+				<p>I'm always on the look out for interesting opportunities. Email me at  <a href="mailto:charlie@charliezhang.xyz">charlie@charliezhang.xyz</a>, or get to know me better through these links.</p>
+				<div class="contact-links">
+					<a href="https://www.github.com/luoyang9">
+						<p class="contact-name">GITHUB</p>
+					</a>
+					<a href="https://www.devpost.com/luoyang9">
+						<p class="contact-name">DEVPOST</p>
+					</a>
+					<a href="https:ca.linkedin.com/in/luoyang9">
+						<p class="contact-name">LINKEDIN</p>
+					</a>
+					<a href="/files/resume.pdf">
+						<p class="contact-name">RESUME</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-links">
+			<span class="footer-home">HOME</span>
+			<span class="footer-about">ABOUT</span>
+			<span class="footer-projects">PROJECTS</span>
+			<span class="footer-contact">CONTACT</span>
+		</div>
+		<div class="footer-note">
+			Made with care in Waterloo | © Charlie Zhang 2017
+		</div>
+	</footer>
 </div>
+<!-- main --> 
+<script src="js/index.js"></script>
+<!-- Google Analytics -->
 <script>
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

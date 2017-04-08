@@ -1,0 +1,45 @@
+@import 'variable';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	color: $primary-color;
+}
+
+a {
+	color: $primary-color;
+	cursor: pointer;
+
+	&:hover {
+		color: $primary-accent;
+	}
+}
+
+.wrapper {
+	opacity: 0;
+}
+
+.container {
+	padding: 20px;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.padding {
+	padding: 20px 30px;
+}
