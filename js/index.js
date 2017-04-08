@@ -93,6 +93,18 @@ $( document ).ready( () => {
 		}
 	});
 
+	var pressedKeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+
+	// konami code
+	$(document).keydown(function(e) {
+		pressedKeys.push(e.keyCode);
+		if ( pressedKeys.toString().indexOf( konami ) >= 0 ) {
+			pressedKeys = [];
+
+			
+	    }
+	});
+
 	// onclicks for navigation
 
 	$(".nav-home").off().click(function() {
