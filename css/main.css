@@ -126,7 +126,7 @@ a {
     -webkit-transform: scale(1.6);
     opacity: 0.0; } }
 .intro {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column; }
   .intro .intro-header {
