@@ -191,6 +191,20 @@
 		        position: relative;
 				box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+				.about-timeline-date {
+					float: right;
+				}
+
+				@media (max-width: 780px) {
+					.about-timeline-date {
+						float: none;
+					}
+
+					span {
+						display: block;
+					}
+				}
+
 		        &:before {
 			        position: absolute;
 			        top: 26px;
