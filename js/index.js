@@ -101,7 +101,7 @@ $( document ).ready( () => {
 		if ( pressedKeys.toString().indexOf( konami ) >= 0 ) {
 			pressedKeys = [];
 
-			
+			alert("KONAMI");
 	    }
 	});
 
