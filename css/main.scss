@@ -14,7 +14,6 @@
 
 		h1 {
 			font-size: 85px;
-			padding-bottom: 15px;
 			font-family: $fancy;
 		}
 
@@ -25,11 +24,11 @@
 
 		@media screen and (max-width: 780px) {
 			h1 {
-				font-size: 32px;
+				font-size: 35px;
 			}
 
 			p {
-				font-size: 20px;
+				font-size: 13px;
 			}
 
 			padding-right: 15px;
@@ -153,7 +152,7 @@
 
 	h1 {
 		font-size: 1.9em;
-		font-family: $fancy;
+		font-weight: 900;
 	}
 
 	.description {
@@ -242,7 +241,7 @@
 			   .about-timeline-content-list {
    					 padding: 10px 20px;
    					 list-style: disc outside none;
-   					 font-size: 15px;
+   					 font-size: 14px;
 
 				   	li {
 				   		&:before {
@@ -251,6 +250,8 @@
 						a {
 							text-decoration: none;
 						}
+
+						margin: 2px 0;
 				   	}
 			   }
 		    }
@@ -359,7 +360,7 @@
 
 	h1 {
 		font-size: 1.9em;
-		font-family: $fancy;
+		font-weight: 900;
 		margin-bottom: 25px;
 	}
 
@@ -432,6 +433,10 @@
 			position: absolute;
 			bottom: 20px;
 			right: 20px;
+
+			a {
+				height: 38px;
+			}
 		}
 	}
 
@@ -474,7 +479,7 @@
 
 	h1 {
 		font-size: 1.9em;
-		font-family: $fancy;
+		font-weight: 900;
 	}
 
 	.contact-info {

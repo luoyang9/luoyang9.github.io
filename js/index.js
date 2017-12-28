@@ -19,7 +19,7 @@ var preload = function(images, callback) {
 		.catch(function(err) { console.error(err); });
 };
 
-$( document ).ready( () => {
+$( document ).ready( function() {
 
 	// initial values
 	var ball_distance = $(window).width() < 780 ? 55 : 80;
