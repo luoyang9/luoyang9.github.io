@@ -163,9 +163,9 @@ a {
         text-decoration: none; }
       .intro .profile-pic-container .contact-links .contact-container {
         display: inline-block;
-        margin: 0;
+        margin: 0 5px;
         width: 45px;
-        color: white;
+        color: #191919;
         transition: color 0.2s; }
         .intro .profile-pic-container .contact-links .contact-container:hover {
           color: #1FA7FB; }
@@ -192,10 +192,8 @@ a {
       .intro .profile-pic-container .contact-links {
         margin: 15px 0;
         font-size: 19px; }
-        .intro .profile-pic-container .contact-links .contact-container {
-          color: #191919; }
-          .intro .profile-pic-container .contact-links .contact-container .contact-name {
-            font-size: 11px; } }
+        .intro .profile-pic-container .contact-links .contact-name {
+          font-size: 11px; } }
   .intro .cta {
     width: 100%;
     text-align: center;
