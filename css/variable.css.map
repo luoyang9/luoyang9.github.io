@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA,UAGC;EAFG,WAAW,EAAE,iBAAiB;EAC9B,GAAG,EAAE,mCAAmC",
-"sources": ["variable.scss"],
-"names": [],
-"file": "variable.css"
-}
+{"version":3,"sourceRoot":"","sources":["variable.scss"],"names":[],"mappings":"AAAA,WACI,8BACA","file":"variable.css"}
